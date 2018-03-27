@@ -1,0 +1,32 @@
+<%= form_with(model: instapic, local: true) do |form| %>
+  <% if instapic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(instapic.errors.count, "error") %> prohibited this instapic from being saved:</h2>
+
+      <ul>
+      <% instapic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture, id: :instapic_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :caption %>
+    <%= form.text_field :caption, id: :instapic_post %>
+  </div>
+
+  <!-- <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :instapic_user_id %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

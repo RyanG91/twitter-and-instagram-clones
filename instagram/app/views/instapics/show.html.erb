@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @instapic.picture %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @instapic.caption %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @instapic.user %>
+</p>
+
+<%= link_to 'Edit', edit_instapic_path(@instapic) %> |
+<%= link_to 'Back', instapics_path %>
